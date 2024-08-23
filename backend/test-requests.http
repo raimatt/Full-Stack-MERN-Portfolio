@@ -1,0 +1,88 @@
+### CREATE five documents.
+POST http://localhost:3000/cars HTTP/1.1
+content-type: application/json
+
+{
+    "make": "Toyota",
+    "model": "Corolla",
+    "year": 2018,
+    "datePurchased": "2019-03-15"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/cars HTTP/1.1
+content-type: application/json
+
+{
+    "make": "Honda",
+    "model": "Civic",
+    "year": 2020,
+    "datePurchased": "2020-07-22"
+}
+
+### CREATE 3
+POST http://localhost:3000/cars HTTP/1.1
+content-type: application/json
+
+{
+    "make": "Ford",
+    "model": "Mustang",
+    "year": 2019,
+    "datePurchased": "2019-08-05"
+}
+
+### CREATE 4
+POST http://localhost:3000/cars HTTP/1.1
+content-type: application/json
+
+{
+    "make": "Chevrolet",
+    "model": "Silverado",
+    "year": 2021,
+    "datePurchased": "2021-11-10"
+}
+
+### CREATE 5
+POST http://localhost:3000/cars HTTP/1.1
+content-type: application/json
+
+{
+    "make": "BMW",
+    "model": "3 Series",
+    "year": 2017,
+    "datePurchased": "2018-01-08"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/cars HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/cars/6653efd4f2ab1552c8a8966e HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/cars/6653efc1f2ab1552c8a89668 HTTP/1.1
+content-type: application/json
+
+{
+    "make": "Subaru",
+    "model": "Outback",
+    "year": 2018,
+    "datePurchased": "2018-12-08"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/cars/66540ddf15b6938760e1f17a HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/cars HTTP/1.1
+
